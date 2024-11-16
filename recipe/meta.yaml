@@ -1,17 +1,17 @@
 {% set name = "pymcubes" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyMCubes-{{ version }}.tar.gz
-  sha256: ad25e96f5a32fb5a363372005a4b68eaf03025c1e781ada62e73b10b45ff7cbb
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1a72476a22a4c98907acec0c5ef8d46f4451fa987c7efeaf970990775826ed8b
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
